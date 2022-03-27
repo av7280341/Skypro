@@ -1,0 +1,59 @@
+import random
+
+words_list = ["window", "ball", "light", "time", "lemon"]
+morse_dict = {
+  "a": ".-",
+  "b": "-...",
+  "c": "-.-.",
+  "d": "-..",
+  "e": ".",
+  "f": "..-.",
+  "g": "--.",
+  "h": "....",
+  "i": "..",
+  "j": ".---",
+  "k": "-.-",
+  "l": ".-..",
+  "m": "--",
+  "n": "-.",
+  "o": "---",
+  "p": ".--.",
+  "q": "--.-",
+  "r": ".-.",
+  "s": "...",
+  "t": "-",
+  "u": "..-",
+  "v": "...-",
+  "w": ".--",
+  "x": "-..-",
+  "y": "-.--",
+  "z": "--..",
+}
+
+answers = []
+question_count = 1
+
+def morse_encode(word):
+    morse_word = " "
+    for i in word:
+      morse_word += morse_dict[i] + " "
+    return morse_word 
+
+morse_encode(word)
+
+def get_word():
+    word = random.choice(words_list)
+    return word
+
+get_word()
+
+
+
+print("Сегодня мы потренируемся расшифровывать морзянку")
+print("Нажмите Enter и начнем")
+print()
+print(f"Слово {question_count}:  {morse_encode(word)}")
+
+
+
+#def print_statistics(answers):
